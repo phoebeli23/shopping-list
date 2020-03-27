@@ -24,21 +24,22 @@ function createListElement() {
 
 function createDeleteButton() {
 	var button = document.createElement("button")
-	button.onclick = deleteItemAfterClick;
+	button.addEventListener("click", deleteItemAfterClick);
 	var trashIcon = document.createElement("i");
 	trashIcon.setAttribute("class", "far fa-trash-alt");
 	button.appendChild(trashIcon);
 	return button;
 }
 
-function deleteItemAfterClick(event) {
-	event.target.parentNode.remove();
+function deleteItemAfterClick() {
+	ul.removeChild(this.parentElement);
+	console.log(ul.childNodes);
 	if (ul.childNodes.length == 4) {
 		emptyList = true;
 		displayEmptyList();
 	}
 }
-	
+
 function displayEmptyList() {
 	ul.appendChild(emptyItem);
 }
@@ -67,5 +68,5 @@ document.querySelectorAll("li").forEach(function(item) {
 });
 
 document.querySelectorAll(".delete").forEach(function(item) {
-	item.onclick = deleteItemAfterClick;
+	item.addEventListener("click", deleteItemAfterClick);
 });
