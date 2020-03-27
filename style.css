@@ -17,12 +17,12 @@ body{
 .coolTitle{
   color: transparent;
   font-size:100px;
-  background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
-  background-position: 40% 50%;
+  background: url("https://images.unsplash.com/photo-1557844352-c386c2db35ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80") repeat;
+  background-position: 50% 70%;
   -webkit-background-clip: text;
   position: relative;
   text-align: center;
-  letter-spacing: -7px;
+  letter-spacing: -6px;
   margin-bottom: 0px;
 }
 
@@ -38,6 +38,7 @@ body{
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  font-family: monospace;
 }
 
 .done {
